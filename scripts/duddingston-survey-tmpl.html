@@ -44,18 +44,35 @@
 
       <div class="row marketing">
 
-	<h4>{{loc_id}} {{loc}}</h4>
+	{% for item in data %}
+
+	<h4>{{ item.loc_id }} {{item.loc}}</h4>
 
 	<div class="col-lg-6">
           <h4>Features</h4>
-          <p></p>
+          <p>
+	    <b>Natural</b>: {{item.natfeats}}
+
+	    <b>Artificial</b>: {{item.mmfeats}}
+
+	    <b>Exposure</b>: {{item.exposure}}
+
+	    <b>Accessibility</b>: {{item.access}}
+	  </p>
 	</div>
 
 
         <div class="col-lg-6">
           <h4>History and Potential Uses</h4>
-          <p></p>
+          <p>{{item.history}}
+
+	    {{item.potential}}
+
+	    {{item.comments}}
+	  </p>
         </div>
+
+	{% endfor %}
 
       </div><!-- /row -->
 
