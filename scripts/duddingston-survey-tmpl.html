@@ -51,6 +51,9 @@
 
 	<h3>{{item.loc}} [ID: {{ item.loc_id }}]</h3>
 
+	<img class="centered" width="500px" align="middle" src="{{ item.photo }}">
+	<iframe src=""></iframe>
+
 	<div class="col-lg-6">
           <h4>Features</h4>
 	  <dl>
@@ -76,7 +79,8 @@
       {% endfor %}
 
       <div class="footer">
-        <p>OpenStreetMap | Open Knowledge Scotland</p>
+        <p><a href="https://github.com/okfnscot/localtivate/blob/master/duddingston_survey.csv">source dataset</a></br>
+	  OpenStreetMap | <a href="http://okfn.scot.org">Open Knowledge Scotland</a>a></p>
       </div>
 
     </div> <!-- /container -->

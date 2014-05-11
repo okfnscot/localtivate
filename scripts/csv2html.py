@@ -9,7 +9,7 @@ HTML_OUT = '../../localtivate-pages/duddingston-survey.html'
 
 def main():
     
-    Location = namedtuple('Location', 'tstamp, loc, category, natfeats, mmfeats, terrain, exposure, use, name, access, history, comments, loc_id, potential')
+    Location = namedtuple('Location', 'tstamp, loc, category, natfeats, mmfeats, terrain, exposure, use, name, access, history, comments, loc_id, potential, photo')
     env = Environment(loader=FileSystemLoader("."))
     template = env.get_template('duddingston-survey-tmpl.html')    
 
