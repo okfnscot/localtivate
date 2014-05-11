@@ -35,3 +35,8 @@ img.centered {
     padding-top: 10px;
     padding-bottom: 10px;
  }
+
+p.main {
+    font-size: 20px;
+
+}
