@@ -27,3 +27,11 @@ dt {
 dd {
     padding-left: 30px;
 }
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
