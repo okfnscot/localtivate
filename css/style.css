@@ -1,0 +1,29 @@
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(../img/jumbotronbackground.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+   
+
+}
+
+.jumbotron h1 {
+    font-size: 80px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.row h3 {
+    color: #f6eff7;
+    background-color: #67a9cf;
+    padding: 10px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    padding-left: 30px;
+}
