@@ -11,10 +11,14 @@
     <title>Localtivate: Duddingston Survey</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+
+
+    <!-- My styles -->
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,40 +45,35 @@
 	<!-- <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p> -->
       </div>
 
+      {% for item in data %}
 
       <div class="row marketing">
 
-	{% for item in data %}
-
-	<h4>{{ item.loc_id }} {{item.loc}}</h4>
+	<h3>{{item.loc}} [ID: {{ item.loc_id }}]</h3>
 
 	<div class="col-lg-6">
           <h4>Features</h4>
-          <p>
-	    <b>Natural</b>: {{item.natfeats}}
-
-	    <b>Artificial</b>: {{item.mmfeats}}
-
-	    <b>Exposure</b>: {{item.exposure}}
-
-	    <b>Accessibility</b>: {{item.access}}
-	  </p>
+	  <dl>
+	    <dt>Natural:</dt><dd>{{item.natfeats}}</dd>
+	    <dt>Artificial:</dt><dd>{{item.mmfeats}}</dd>
+	    <dt>Exposure:</dt><dd>{{item.exposure}}</dd>
+	    <dt>Accessibility:</dt><dd>{{item.access}}</dd>
+	  </dl>
 	</div>
 
 
         <div class="col-lg-6">
           <h4>History and Potential Uses</h4>
-          <p>{{item.history}}
-
-	    {{item.potential}}
-
-	    {{item.comments}}
-	  </p>
+	  <dl>
+	    <dt>History:</dt><dd>{{item.history}}</dd>
+	    <dt>Potential:</dt><dd>{{item.potential}}</dd>
+	    <dt>Comments:</dt><dd>{{item.comments}}</dd>
+	  </dl>
         </div>
 
-	{% endfor %}
-
       </div><!-- /row -->
+
+      {% endfor %}
 
       <div class="footer">
         <p>OpenStreetMap | Open Knowledge Scotland</p>

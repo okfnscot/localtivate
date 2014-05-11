@@ -5,16 +5,14 @@ from jinja2 import Environment, FileSystemLoader
 
 
 CSV_IN = "../duddingston_survey.csv"
-
-
-env = Environment(loader=FileSystemLoader("."))
-template = env.get_template('duddingston-survey-tmpl.html')
-
-
+HTML_OUT = '../../localtivate-pages/duddingston-survey.html'
 
 def main():
-    Location = namedtuple('Location', 'tstamp, loc, category, natfeats, mmfeats, terrain, exposure, use, name, access, history, comments, loc_id, potential')
     
+    Location = namedtuple('Location', 'tstamp, loc, category, natfeats, mmfeats, terrain, exposure, use, name, access, history, comments, loc_id, potential')
+    env = Environment(loader=FileSystemLoader("."))
+    template = env.get_template('duddingston-survey-tmpl.html')    
+
     with open(CSV_IN) as csvfile:
         
         reader = csv.reader(csvfile)
@@ -23,8 +21,9 @@ def main():
         data = map(Location._make, reader)           
         html_out = template.render(data=data)
              
-        with open('duddingston-survey-tmpl.html', 'w') as fh:
-            fh.write(html_out)       
+        with open(HTML_OUT, 'w') as fh:
+            fh.write(html_out)
+            print('Writing text to %s' % HTML_OUT)
                         
 
 if __name__ == "__main__":
