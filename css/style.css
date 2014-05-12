@@ -1,3 +1,7 @@
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
 .jumbotron {
     margin-bottom: 0px;
     background-image: url(../img/jumbotronbackground.jpg);
@@ -40,4 +44,9 @@ p.main {
 
 #map {
     padding-left: 10px;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
 }
