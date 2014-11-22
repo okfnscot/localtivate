@@ -1,4 +1,6 @@
 localtivate
 ===========
 
-Data for Locate+Cultivate
+Data for Localtivate.
+
+[Localtivate Website](http://okfnscot.github.io/localtivate/index.html)
